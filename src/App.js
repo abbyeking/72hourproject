@@ -5,38 +5,39 @@ import './components/Jeremy/NASA.css';// This pattern is preferred where css for
 // A component import
 import Navbar from './components/Navbar'
 import Nasa from "./components/Jeremy/NASA";
+import Restaurant from './components/Abby/Restaurant';
 
 
-// Defining our <App /> component the function name matches the file name
-function App() {
-  // All functional components need to return jsx with one parent element
+const App = () => {
 
-  const [latitude, setLatitude] = useState('');
-  const [longitude, setLongitude] = useState('');
-  const [geoLoc, setGeoLoc] = useState({});
+  const [pos, setPos] = useState({lat: 0, long: 0});
+  const getLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(getCoords)
+      } else {
+        alert('GeoLocation disabled');
+      }
+    }
+  const getCoords = (position) => {
+      console.log(position)
+      setPos({
+        lat: position.coords.latitude,
+        long: position.coords.longitude
+      })
+    }
 
-  useEffect( () => {
-    navigator.geolocation.getCurrentPosition(setLoc);
-  }, []);
+    useEffect(() => {
+      getLocation();
+    }, [])
 
-
-  const setLoc = (position) => {
-    setGeoLoc({
-      latitude: position.coords.latitude,
-      longitude: position.coords.longitude
-    });
-
-    console.log(position.coords.latitude, position.coords.longitude);
-  }
 
   return ( 
-    <div className="App"> {/* Parent Element. Also we can't use the word class, so we use className in jsx*/}
-      {/* Navbar is our imported component*/}
+    <div className="App"> 
       <Navbar />
-      <Nasa geoLoc={geoLoc} />
+      <Restaurant pos={pos} />
+      <Nasa geoLoc={pos} />
     </div>
   );
 }
 
-// Makes our Component available for import
 export default App;
