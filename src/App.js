@@ -6,6 +6,7 @@ import './components/Jeremy/NASA.css';// This pattern is preferred where css for
 import Navbar from './components/Navbar'
 import Nasa from "./components/Jeremy/NASA";
 import Restaurant from './components/Abby/Restaurant';
+import OpenWeather from './components/Jonny/weather';
 
 
 const App = () => {
@@ -30,12 +31,12 @@ const App = () => {
       getLocation();
     }, [])
 
-
   return ( 
     <div className="App"> 
       <Navbar />
       <Restaurant pos={pos} />
       <Nasa geoLoc={pos} />
+      <OpenWeather pos={pos}/>
     </div>
   );
 }
