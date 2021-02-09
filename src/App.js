@@ -1,8 +1,12 @@
-import {useEffect,useState} from 'react';
-import './App.css'; 
+import React, {useState, useEffect} from 'react';
+import './App.css';
+import './components/Jeremy/NASA.css';// This pattern is preferred where css for this component has a matching .css filename
 
-import Navbar from './components/Navbar';
+// A component import
+import Navbar from './components/Navbar'
+import Nasa from "./components/Jeremy/NASA";
 import Restaurant from './components/Abby/Restaurant';
+
 
 const App = () => {
 
@@ -26,10 +30,12 @@ const App = () => {
       getLocation();
     }, [])
 
+
   return ( 
     <div className="App"> 
       <Navbar />
       <Restaurant pos={pos} />
+      <Nasa geoLoc={pos} />
     </div>
   );
 }
