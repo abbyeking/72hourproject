@@ -100,7 +100,7 @@
 
 //ITERATION FOUR
 import React, { useEffect, useState } from "react";
-
+import './NASA.css'; 
 const key = "P0MkBcEQsjdw6xfNvmABK2c1OS2PpusY4PGSGkty";
 const base_url = "https://api.nasa.gov/planetary/earth/assets";
 
@@ -112,7 +112,7 @@ const Nasa = () => {
       let long = position.coords.longitude;
 
       fetch(
-        `${base_url}?lon=${long}&lat=${lat}&date=2018-02-01&&dim=0.15&api_key=${key}`
+        `${base_url}?lon=${long}&lat=${lat}&date=2018-02-01&&dim=.25&api_key=${key}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -123,10 +123,28 @@ const Nasa = () => {
   }, []);
 
   return (
-    <div>
+    <div className="main">
       <div>
-        <h1>What the aliens see</h1>
-        <img className="nasaImg" width="300" src={photoData} alt="NASA satellite image" />
+        <h1><span class="G1">G</span> 
+        <span class="e1">o</span> 
+        <span class="e2">o</span> 
+        <span class="k1">g</span> 
+        <span class="s1">l</span> 
+        <span class="f">e</span> 
+        <span class="o">S</span> 
+        <span class="r">a</span> 
+        <span class="G2">t</span> 
+        <span class="e3">e</span> 
+        <span class="e4">l</span> 
+        <span class="k2">l</span> 
+        <span class="s2">i</span>
+        <span class="t2">t</span> 
+        <span class="v2">e</span>
+        <span class="x2">!</span>
+        {/* Google Satellite View Of Your Present Location */}
+        </h1>
+        <img className="circle" width="400" src={photoData} alt="NASA satellite image" />
+        <h2>(View Of Your Present Location)</h2>
       </div>
     </div>
   );
