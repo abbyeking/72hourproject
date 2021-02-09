@@ -1,0 +1,81 @@
+.circle {
+    border-radius: 200px;
+}
+h1 {
+    text-align: center;
+    padding-top: 0px; 
+    font-size: 58px;
+    color:darkblue;
+}
+h2 {
+    font-weight: bolder;
+    font-size: 34px;
+}
+.G1 { 
+    transform: translate(-55px, 202px) rotate(-66deg); 
+} 
+
+.e1 { 
+    transform: translate(-70px, 159px) rotate(-58deg); 
+} 
+
+.e2 { 
+    transform: translate(-75px, 127px) rotate(-52deg); 
+} 
+
+.k1 { 
+    transform: translate(-74px, 93px) rotate(-40deg); 
+} 
+
+.s1 { 
+    transform: translate(-65px, 71px) rotate(-31deg); 
+} 
+
+.f { 
+    transform: translate(-55px, 57px) rotate(-21deg); 
+} 
+
+.o { 
+    transform: translate(-7px, 42px) rotate(-2deg); 
+} 
+
+.r { 
+    transform: translate(11px, 44px) rotate(10deg); 
+} 
+
+.G2 { 
+    transform: translate(25px, 51px) rotate(21deg); 
+} 
+
+.e3 { 
+    transform: translate(40px, 66px) rotate(30deg); 
+} 
+
+.e4 { 
+    transform: translate(51px, 85px) rotate(39deg); 
+} 
+
+.k2 { 
+    transform: translate(60px, 106px) rotate(48deg); 
+} 
+
+.s2 { 
+    transform: translate(63px, 130px) rotate(53deg); 
+} 
+.t2 { 
+    transform: translate(62px, 155px) rotate(57deg); 
+} 
+.v2 { 
+    transform: translate(57px, 185px) rotate(60deg); 
+} 
+.x2 { 
+    transform: translate(45px, 215px) rotate(71deg); 
+} 
+
+/* An inline-block element is placed as an inline 
+ element (on the same line as adjacent content),  
+ but it behaves like a block element  */ 
+
+span { 
+    display: inline-block; 
+} 
